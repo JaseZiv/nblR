@@ -15,6 +15,7 @@ BugReports: https://github.com/JaseZiv/nblR/issues
 Depends:
   R (>= 4.0.0)
 Imports:
+    dplyr,
     magrittr,
     cli
 Suggests: 
