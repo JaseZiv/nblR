@@ -1,0 +1,108 @@
+---
+title: "Getting NBL Basketball stats using nblR"
+author: "Jason Zivkovic"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting NBL Basketball stats using nblR}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  message=FALSE,
+  warning=FALSE
+)
+```
+
+
+## Overview
+
+This vignette will outline how to use the functions in the `nblR` package to allow users to obtain clean and tidy data from the Australian National Basketball League (NBL).
+
+
+## Installation
+
+
+You can install the released version of [**```nblR```**](https://github.com/JaseZiv/nblR/) from [GitHub](https://github.com/JaseZiv/nblR) with:
+
+```{r gh-installation, eval=FALSE}
+# install.packages("remotes")
+remotes::install_github("JaseZiv/nblR")
+```
+
+
+```{r libraries}
+library(nblR)
+library(dplyr)
+```
+
+
+## Usage
+
+
+The following code will show you how to get various different statistics for the Australian National Basketball League (NBL).
+
+
+### Match Results
+
+To get results of matches playes in the NBL since the 1979 season, use the `nbl_results()` function. This function takes in one argument - `wide_or_long` (options either 'wide' or 'long').
+
+Using `wide_or_long = "wide"`, the resulting data frame will have one row per match played, with the home and away team listed.
+
+```{r match_results_wide}
+results_wide <- nbl_results(wide_or_long = "wide")
+dplyr::glimpse(results_wide)
+```
+
+
+Using `wide_or_long = "long"`, the resulting data frame will instead have two rows per match played, with both teams listed on a separate line.
+
+```{r match_results_long}
+results_long <- nbl_results(wide_or_long = "long")
+dplyr::glimpse(results_long)
+```
+
+
+### Team Box Scores
+
+To get box scores at the *team* level, use the `nbl_box_team()` function. This will return team box score data since the 2015-2016 season. Note, not all fields will contain data for earlier seasons.
+
+```{r team_box}
+team_box <- nbl_box_team()
+glimpse(team_box)
+```
+
+
+### Player Box Scores
+
+To get box scores at the *player* level, use the `nbl_box_player()` function. This will return player box score data since the 2015-2016 season. Note, not all fields will contain data for earlier seasons.
+
+```{r player_box}
+player_box <- nbl_box_player()
+glimpse(player_box)
+```
+
+
+### Play-by-Play data
+
+To get play-by-play data, use the `nbl_pbp()` function. This will return play-by-play data since the 2015-2016 season. Note, not all fields will contain data for earlier seasons.
+
+```{r pbp}
+pbp <- nbl_pbp()
+glimpse(pbp)
+```
+
+
+
+### Shots data
+
+To get shot location and type data, use the `nbl_shots()` function. This will return shooting data since the 2015-2016 season. Note, not all fields will contain data for earlier seasons.
+
+```{r shots}
+shots <- nbl_shots()
+glimpse(shots)
+```

@@ -18,6 +18,7 @@ options(tibble.print_min = 5, tibble.print_max = 5)
 
 <!-- badges: start -->
 [![Version-Number](https://img.shields.io/github/r-package/v/JaseZiv/nblR?label=nblR (Dev))](https://github.com/JaseZiv/nblR/)
+[![R-CMD-check](https://github.com/JaseZiv/nblR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JaseZiv/nblR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
@@ -66,3 +67,9 @@ Follow me on Twitter ([jaseziv](https://twitter.com/jaseziv)) for updates
 If this package helps you, all I ask is that you star this repo
 
 ***
+
+## Acknowledgement
+
+Big thanks to [Jacquie Tran](https://github.com/jacquietran) for the inspiration her [`wnblr`](https://github.com/jacquietran/wnblr) library gave for this one.
+
+Also, thanks to the NBL for being the league it is!
