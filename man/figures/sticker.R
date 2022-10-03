@@ -3,7 +3,7 @@ library(hexSticker)
 
 sysfonts::font_add_google(name = "Chivo", family = "chivo")
 
-sticker(subplot = "man/figures/bballer 2.png",
+sticker(subplot = "man/figures/bballer_2.png",
         package="nblR",
         p_family = "chivo", p_size=12, p_color = "#fefefe", p_y = 1.4,
         s_x=1, s_y=.66, s_width=0.4, s_height=0.55,
@@ -18,7 +18,7 @@ sticker(subplot = "man/figures/bballer 2.png",
 
 
 # smaller size hex logo:
-sticker(subplot = "man/figures/bballer 2.png",
+sticker(subplot = "man/figures/bballer_2.png",
         package="nblR",
         p_family = "chivo", p_size=12, p_color = "#fefefe", p_y = 1.4,
         s_x=1, s_y=.66, s_width=0.4, s_height=0.55,

@@ -1,7 +1,7 @@
 Type: Package
 Package: nblR
 Title: Data extraction of Australian NBL basketball statistics
-Version: 0.0.0.1000
+Version: 0.0.0.2000
 Authors@R: c(
     person("Jason", "Zivkovic", , "jaseziv83@gmail.com", role = c("aut", "cre", "cph"))
   )
@@ -16,7 +16,6 @@ Depends:
   R (>= 4.0.0)
 Imports:
     magrittr,
-    purrr,
     cli
 Suggests: 
     knitr,

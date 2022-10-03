@@ -4,10 +4,7 @@
 \alias{nbl_shots}
 \title{Get shots data from the NBL}
 \usage{
-nbl_shots(season)
-}
-\arguments{
-\item{season}{season(s) data wanted for, in the format '2021-2022'}
+nbl_shots()
 }
 \value{
 returns a dataframe of shot location data
@@ -19,8 +16,7 @@ for NBL matches played since 2015-16
 \examples{
 \dontrun{
 try({
-shots_2022 <- nbl_shots(season="2021-2022")
-shots_multiple <- nbl_shots(season = c("2021-2022", "2022-2023"))
+shots <- nbl_shots()
 })
 }
 }

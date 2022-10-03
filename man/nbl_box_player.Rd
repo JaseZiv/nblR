@@ -4,10 +4,7 @@
 \alias{nbl_box_player}
 \title{Get player box score data from the NBL}
 \usage{
-nbl_box_player(season)
-}
-\arguments{
-\item{season}{season(s) data wanted for, in the format '2021-2022'}
+nbl_box_player()
 }
 \value{
 returns a dataframe of player box score data
@@ -19,8 +16,7 @@ data for NBL matches played since 2015-16
 \examples{
 \dontrun{
 try({
-player_box_2022 <- nbl_box_player(season="2022-2023")
-player_box_multiple <- nbl_box_player(season = c("2021-2022", "2022-2023"))
+player_box <- nbl_box_player()
 })
 }
 }

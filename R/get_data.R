@@ -40,8 +40,6 @@ nbl_results <- function(wide_or_long) {
 #' Returns a data frame of all available shot data
 #' for NBL matches played since 2015-16
 #'
-#' @param season season(s) data wanted for, in the format '2021-2022'
-#' 
 #' @importFrom magrittr %>%
 #'
 #' @return returns a dataframe of shot location data
@@ -51,14 +49,12 @@ nbl_results <- function(wide_or_long) {
 #' @examples
 #' \dontrun{
 #' try({
-#' shots_2022 <- nbl_shots(season="2021-2022")
-#' shots_multiple <- nbl_shots(season = c("2021-2022", "2022-2023"))
+#' shots <- nbl_shots()
 #' })
 #' }
-nbl_shots <- function(season) {
-  dat_urls <- paste0("https://github.com/JaseZiv/nblr_data/releases/download/shots/shots_", season, ".rds")
+nbl_shots <- function() {
   
-  dat_df <- dat_urls %>% purrr::map_df(.file_reader)
+  dat_df <- .file_reader("https://github.com/JaseZiv/nblr_data/releases/download/shots/shots.rds")
   
   cli::cli_alert("Data last updated {attr(dat_df, 'nblr_timestamp')} AEST")
   
@@ -71,8 +67,6 @@ nbl_shots <- function(season) {
 #' Returns a data frame of all available play-by-play
 #' data for NBL matches played since 2015-16
 #'
-#' @param season season(s) data wanted for, in the format '2021-2022'
-#'
 #' @importFrom magrittr %>%
 #'
 #' @return returns a dataframe of play-by-play data
@@ -82,14 +76,13 @@ nbl_shots <- function(season) {
 #' @examples
 #' \dontrun{
 #' try({
-#' pbp_2022 <- nbl_pbp(season="2021-2022")
-#' pbp_multiple <- nbl_pbp(season = c("2021-2022", "2022-2023"))
+#' pbp <- nbl_pbp()
 #' })
 #' }
-nbl_pbp <- function(season) {
-  dat_urls <- paste0("https://github.com/JaseZiv/nblr_data/releases/download/pbp/pbp_", season, ".rds")
+nbl_pbp <- function() {
+  dat_urls <- paste0()
   
-  dat_df <- dat_urls %>% purrr::map_df(.file_reader)
+  dat_df <- .file_reader("https://github.com/JaseZiv/nblr_data/releases/download/pbp/pbp.rds")
   
   cli::cli_alert("Data last updated {attr(dat_df, 'nblr_timestamp')} AEST")
   
@@ -104,8 +97,6 @@ nbl_pbp <- function(season) {
 #' Returns a data frame of all available team box scores
 #' data for NBL matches played since 2015-16
 #'
-#' @param season season(s) data wanted for, in the format '2021-2022'
-#'
 #' @importFrom magrittr %>%
 #'
 #' @return returns a dataframe of team box score data
@@ -115,14 +106,12 @@ nbl_pbp <- function(season) {
 #' @examples
 #' \dontrun{
 #' try({
-#' team_box_2022 <- nbl_box_team(season="2021-2022")
-#' team_box_multiple <- nbl_box_team(season = c("2021-2022", "2022-2023"))
+#' team_box <- nbl_box_team()
 #' })
 #' }
-nbl_box_team <- function(season) {
-  dat_urls <- paste0("https://github.com/JaseZiv/nblr_data/releases/download/box_team/box_team_", season, ".rds")
+nbl_box_team <- function() {
   
-  dat_df <- dat_urls %>% purrr::map_df(.file_reader)
+  dat_df <- .file_reader("https://github.com/JaseZiv/nblr_data/releases/download/box_team/box_team.rds")
   
   cli::cli_alert("Data last updated {attr(dat_df, 'nblr_timestamp')} AEST")
   
@@ -136,8 +125,6 @@ nbl_box_team <- function(season) {
 #' Returns a data frame of all available player box scores
 #' data for NBL matches played since 2015-16
 #'
-#' @param season season(s) data wanted for, in the format '2021-2022'
-#'
 #' @importFrom magrittr %>%
 #'
 #' @return returns a dataframe of player box score data
@@ -147,14 +134,12 @@ nbl_box_team <- function(season) {
 #' @examples
 #' \dontrun{
 #' try({
-#' player_box_2022 <- nbl_box_player(season="2022-2023")
-#' player_box_multiple <- nbl_box_player(season = c("2021-2022", "2022-2023"))
+#' player_box <- nbl_box_player()
 #' })
 #' }
-nbl_box_player <- function(season) {
-  dat_urls <- paste0("https://github.com/JaseZiv/nblr_data/releases/download/box_player/box_player_", season, ".rds")
+nbl_box_player <- function() {
   
-  dat_df <- dat_urls %>% purrr::map_df(.file_reader)
+  dat_df <- .file_reader("https://github.com/JaseZiv/nblr_data/releases/download/box_player/box_player.rds")
   
   cli::cli_alert("Data last updated {attr(dat_df, 'nblr_timestamp')} AEST")
   

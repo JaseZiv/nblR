@@ -4,10 +4,7 @@
 \alias{nbl_pbp}
 \title{Get play-by-play data from the NBL}
 \usage{
-nbl_pbp(season)
-}
-\arguments{
-\item{season}{season(s) data wanted for, in the format '2021-2022'}
+nbl_pbp()
 }
 \value{
 returns a dataframe of play-by-play data
@@ -19,8 +16,7 @@ data for NBL matches played since 2015-16
 \examples{
 \dontrun{
 try({
-pbp_2022 <- nbl_pbp(season="2021-2022")
-pbp_multiple <- nbl_pbp(season = c("2021-2022", "2022-2023"))
+pbp <- nbl_pbp()
 })
 }
 }
