@@ -6,6 +6,7 @@
 <!-- badges: start -->
 
 [![Version-Number](https://img.shields.io/github/r-package/v/JaseZiv/nblR?label=nblR%20(Dev))](https://github.com/JaseZiv/nblR/)
+[![R-CMD-check](https://github.com/JaseZiv/nblR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JaseZiv/nblR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Overview
@@ -30,7 +31,7 @@ library(nblR)
 ### How To
 
 To get a better understanding of how to use the library, see the package
-vignette
+[vignette](https://jaseziv.github.io/nblR/articles/using-nblR.html)
 
 ------------------------------------------------------------------------
 
@@ -56,3 +57,11 @@ updates
 If this package helps you, all I ask is that you star this repo
 
 ------------------------------------------------------------------------
+
+## Acknowledgement
+
+Big thanks to [Jacquie Tran](https://github.com/jacquietran) for the
+inspiration her [`wnblr`](https://github.com/jacquietran/wnblr) library
+gave for this one.
+
+Also, thanks to the NBL for being the league it is!

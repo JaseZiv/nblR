@@ -43,7 +43,7 @@ library(nblR)
 
 ### How To
 
-To get a better understanding of how to use the library, see the package vignette
+To get a better understanding of how to use the library, see the package [vignette](https://jaseziv.github.io/nblR/articles/using-nblR.html)
 
 ***
 
