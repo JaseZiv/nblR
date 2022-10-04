@@ -7,5 +7,6 @@ authors:
 template:
   bootstrap: 5
   bootswatch: sketchy
-
+  params:
+    ganalytics: G-NDW407TTS5
 
