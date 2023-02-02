@@ -11,6 +11,15 @@ template:
     base_font: {google: "Overlock"}
     heading_font: {google: "Overlock"}
     code_font: {google: "Overlock"}
-  params:
-    ganalytics: G-NDW407TTS5
+  includes:
+    in_header: |
+       <!-- Google tag (gtag.js) -->
+       <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDW407TTS5"></script>
+       <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+
+         gtag('config', 'G-NDW407TTS5');
+       </script>
 
