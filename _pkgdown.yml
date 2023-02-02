@@ -6,7 +6,11 @@ authors:
 
 template:
   bootstrap: 5
-  bootswatch: sketchy
+  bootswatch: flatly
+  bslib:
+    base_font: {google: "Overlock"}
+    heading_font: {google: "Overlock"}
+    code_font: {google: "Overlock"}
   params:
     ganalytics: G-NDW407TTS5
 
