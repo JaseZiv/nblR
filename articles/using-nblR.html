@@ -24,7 +24,13 @@
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<![endif]--><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-NDW407TTS5"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NDW407TTS5');
+</script>
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -194,7 +200,7 @@ for earlier seasons.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">team_box</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nbl_box_team.html">nbl_box_team</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">team_box</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 2,132</span></span>
+<span><span class="co">#&gt; Rows: 2,134</span></span>
 <span><span class="co">#&gt; Columns: 67</span></span>
 <span><span class="co">#&gt; $ match_id                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 139002, 139002, 139003, 139003, 139004, 1390…</span></span>
 <span><span class="co">#&gt; $ season                    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015-2016", "2015-2016", "2015-2016", "2015…</span></span>
@@ -274,8 +280,55 @@ data for earlier seasons.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">player_box</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nbl_box_player.html">nbl_box_player</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">player_box</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 0</span></span>
-<span><span class="co">#&gt; Columns: 0</span></span></code></pre></div>
+<span><span class="co">#&gt; Rows: 24,679</span></span>
+<span><span class="co">#&gt; Columns: 47</span></span>
+<span><span class="co">#&gt; $ match_id                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 139002, 139002, 139002, 139002, 139002, 1390…</span></span>
+<span><span class="co">#&gt; $ season                    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015-2016", "2015-2016", "2015-2016", "2015…</span></span>
+<span><span class="co">#&gt; $ team_name                 <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Adelaide 36ers", "Adelaide 36ers", "Adelaid…</span></span>
+<span><span class="co">#&gt; $ team_short_name           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "36ers", "36ers", "36ers", "36ers", "36ers",…</span></span>
+<span><span class="co">#&gt; $ home_away                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2,…</span></span>
+<span><span class="co">#&gt; $ opp_name                  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "New Zealand Breakers", "New Zealand Breaker…</span></span>
+<span><span class="co">#&gt; $ opp_short_name            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Breakers", "Breakers", "Breakers", "Breaker…</span></span>
+<span><span class="co">#&gt; $ first_name                <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Adam", "Matthew", "nelson", "Brendan", "Ken…</span></span>
+<span><span class="co">#&gt; $ family_name               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Gibson", "Hodgson", "Larkins", "Teys", "McN…</span></span>
+<span><span class="co">#&gt; $ playing_position          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "G", "CEN", "", "G", "G", "FWD", "FWD", "", …</span></span>
+<span><span class="co">#&gt; $ starter                   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 0,…</span></span>
+<span><span class="co">#&gt; $ shirt_number              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1", "3", "6", "7", "11", "12", "17", "20", …</span></span>
+<span><span class="co">#&gt; $ captain                   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…</span></span>
+<span><span class="co">#&gt; $ minutes                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "28:37", "18:22", "0:36", "16:31", "5:27", "…</span></span>
+<span><span class="co">#&gt; $ points                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 11, 18, 0, 10, 0, 2, 9, 7, 15, 13, 0, 5, 13,…</span></span>
+<span><span class="co">#&gt; $ field_goals_made          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 4, 7, 0, 4, 0, 1, 4, 2, 3, 5, 0, 2, 5, 5, 1,…</span></span>
+<span><span class="co">#&gt; $ field_goals_attempted     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 11, 10, 0, 7, 0, 2, 7, 5, 10, 13, 0, 6, 16, …</span></span>
+<span><span class="co">#&gt; $ field_goals_percentage    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 36, 70, 0, 57, 0, 50, 57, 40, 30, 38, 0, 33,…</span></span>
+<span><span class="co">#&gt; $ three_pointers_made       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 0, 0, 1, 0, 0, 1, 1, 1, 3, 0, 0, 3, 1, 1,…</span></span>
+<span><span class="co">#&gt; $ three_pointers_attempted  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 0, 0, 1, 0, 0, 2, 1, 1, 9, 0, 0, 8, 6, 2,…</span></span>
+<span><span class="co">#&gt; $ three_pointers_percentage <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 100, 0, 0, 100, 0, 0, 50, 100, 100, 33, 0, 0…</span></span>
+<span><span class="co">#&gt; $ two_pointers_made         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 3, 7, 0, 3, 0, 1, 3, 1, 2, 2, 0, 2, 2, 4, 0,…</span></span>
+<span><span class="co">#&gt; $ two_pointers_attempted    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 10, 10, 0, 6, 0, 2, 5, 4, 9, 4, 0, 6, 8, 5, …</span></span>
+<span><span class="co">#&gt; $ two_pointers_percentage   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 30, 70, 0, 50, 0, 50, 60, 25, 22, 50, 0, 33,…</span></span>
+<span><span class="co">#&gt; $ free_throws_made          <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 4, 0, 1, 0, 0, 0, 2, 8, 0, 0, 1, 0, 3, 0,…</span></span>
+<span><span class="co">#&gt; $ free_throws_attempted     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 6, 0, 2, 0, 0, 0, 2, 9, 0, 0, 2, 0, 4, 0,…</span></span>
+<span><span class="co">#&gt; $ free_throws_percentage    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 100, 66, 0, 50, 0, 0, 0, 100, 88, 0, 0, 50, …</span></span>
+<span><span class="co">#&gt; $ rebounds_defensive        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 4, 2, 0, 4, 1, 2, 2, 0, 6, 3, 0, 1, 2, 2, 2,…</span></span>
+<span><span class="co">#&gt; $ rebounds_offensive        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 7, 0, 1, 0, 2, 1, 0, 2, 0, 0, 5, 2, 0, 0,…</span></span>
+<span><span class="co">#&gt; $ rebounds_total            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 6, 9, 0, 5, 1, 4, 3, 0, 8, 3, 0, 6, 4, 2, 2,…</span></span>
+<span><span class="co">#&gt; $ assists                   <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 8, 0, 0, 1, 0, 0, 1, 3, 1, 1, 0, 3, 1, 6, 1,…</span></span>
+<span><span class="co">#&gt; $ turnovers                 <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 1, 0, 1, 0, 1, 3, 3, 1, 1, 0, 2, 1, 2, 2,…</span></span>
+<span><span class="co">#&gt; $ steals                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3, 1, 0,…</span></span>
+<span><span class="co">#&gt; $ blocks                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 3, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0,…</span></span>
+<span><span class="co">#&gt; $ blocks_received           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 2, 0, 0,…</span></span>
+<span><span class="co">#&gt; $ fouls_personal            <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 2, 0, 0, 0, 1, 5, 2, 2, 1, 0, 0, 2, 2, 4, 2,…</span></span>
+<span><span class="co">#&gt; $ fouls_on                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 6, 3, 0, 3, 0, 0, 1, 2, 7, 0, 0, 1, 0, 5, 0,…</span></span>
+<span><span class="co">#&gt; $ points_second_chance      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…</span></span>
+<span><span class="co">#&gt; $ active                    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1,…</span></span>
+<span><span class="co">#&gt; $ photo_t                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "http://img.wh.sportingpulseinternational.co…</span></span>
+<span><span class="co">#&gt; $ photo_s                   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "http://img.wh.sportingpulseinternational.co…</span></span>
+<span><span class="co">#&gt; $ name                      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span></span>
+<span><span class="co">#&gt; $ points_fast_break         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span></span>
+<span><span class="co">#&gt; $ points_in_the_paint       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span></span>
+<span><span class="co">#&gt; $ plus_minus_points         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span></span>
+<span><span class="co">#&gt; $ efficiency_custom         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span></span>
+<span><span class="co">#&gt; $ scoreboard_name           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, …</span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="play-by-play-data">Play-by-Play data<a class="anchor" aria-label="anchor" href="#play-by-play-data"></a>
@@ -323,7 +376,7 @@ Note, not all fields will contain data for earlier seasons.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">shots</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nbl_shots.html">nbl_shots</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">shots</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 148,561</span></span>
+<span><span class="co">#&gt; Rows: 148,693</span></span>
 <span><span class="co">#&gt; Columns: 20</span></span>
 <span><span class="co">#&gt; $ match_id        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 139002, 139002, 139002, 139002, 139002, 139002, 139002…</span></span>
 <span><span class="co">#&gt; $ season          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015-2016", "2015-2016", "2015-2016", "2015-2016", "2…</span></span>
