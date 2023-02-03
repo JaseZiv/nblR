@@ -6,11 +6,13 @@ authors:
 
 template:
   bootstrap: 5
-  bootswatch: flatly
+  bootswatch: cosmo
+  # theme: arrow-light
   bslib:
-    base_font: {google: "Kanit"}
+    font_scale: 1.2
+    base_font: {google: "IBM Plex Sans"}
     heading_font: {google: "Kanit"}
-    code_font: {google: "Kanit"}
+    code_font: {google: "Fira Code"}
   includes:
     in_header: |
        <!-- Google tag (gtag.js) -->
@@ -22,4 +24,3 @@ template:
 
          gtag('config', 'G-NDW407TTS5');
        </script>
-
