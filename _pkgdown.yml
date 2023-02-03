@@ -1,0 +1,9 @@
+url: https://jaseziv.github.io/nblR/
+
+authors:
+  Jason Zivkovic:
+    href: https://twitter.com/jaseziv
+
+template:
+  bootstrap: 5
+  bootswatch: sketchy
