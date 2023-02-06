@@ -38,7 +38,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">nblR</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.2000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.4</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,7 +87,7 @@
                         <h4 data-toc-skip class="author">Jason
 Zivkovic</h4>
             
-            <h4 data-toc-skip class="date">2023-02-03</h4>
+            <h4 data-toc-skip class="date">2023-02-06</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/JaseZiv/nblR/blob/HEAD/vignettes/using-nblR.Rmd" class="external-link"><code>vignettes/using-nblR.Rmd</code></a></small>
       <div class="d-none name"><code>using-nblR.Rmd</code></div>
@@ -105,12 +105,17 @@ from the Australian National Basketball League (NBL).</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
-<p>You can install the released version of <a href="https://github.com/JaseZiv/nblR/" class="external-link"><strong><code>nblR</code></strong></a>
-from <a href="https://github.com/JaseZiv/nblR" class="external-link">GitHub</a> with:</p>
+<p>You can install the CRAN version of <a href="https://CRAN.R-project.org/package=nblR" class="external-link"><strong><code>nblR</code></strong></a>
+with the below.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"nblR"</span><span class="op">)</span></span></code></pre></div>
+<p>Alternatively, you can install the dev (little less stable) version
+of <a href="https://github.com/JaseZiv/nblR/" class="external-link"><strong><code>nblR</code></strong></a>
+from <a href="https://github.com/JaseZiv/nblR" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages("remotes")</span></span>
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"JaseZiv/nblR"</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/JaseZiv/nblR" class="external-link">nblR</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span></code></pre></div>
 </div>
@@ -122,17 +127,17 @@ statistics for the Australian National Basketball League (NBL).</p>
 <div class="section level3">
 <h3 id="match-results">Match Results<a class="anchor" aria-label="anchor" href="#match-results"></a>
 </h3>
-<p>To get results of matches playes in the NBL since the 1979 season,
+<p>To get results of matches players in the NBL since the 1979 season,
 use the <code><a href="../reference/nbl_results.html">nbl_results()</a></code> function. This function takes in one
 argument - <code>wide_or_long</code> (options either ‘wide’ or
 ‘long’).</p>
 <p>Using <code>wide_or_long = "wide"</code>, the resulting data frame
 will have one row per match played, with the home and away team
 listed.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">results_wide</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nbl_results.html">nbl_results</a></span><span class="op">(</span>wide_or_long <span class="op">=</span> <span class="st">"wide"</span><span class="op">)</span></span>
 <span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">results_wide</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 7,408</span></span>
+<span><span class="co">#&gt; Rows: 7,410</span></span>
 <span><span class="co">#&gt; Columns: 22</span></span>
 <span><span class="co">#&gt; $ match_id           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 27606, 27607, 27608, 27518, 27519, 27520, 27521, 27…</span></span>
 <span><span class="co">#&gt; $ season             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1979", "1979", "1979", "1979", "1979", "1979", "19…</span></span>
@@ -159,10 +164,10 @@ listed.</p>
 <p>Using <code>wide_or_long = "long"</code>, the resulting data frame
 will instead have two rows per match played, with both teams listed on a
 separate line.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">results_long</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nbl_results.html">nbl_results</a></span><span class="op">(</span>wide_or_long <span class="op">=</span> <span class="st">"long"</span><span class="op">)</span></span>
 <span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">results_long</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 14,816</span></span>
+<span><span class="co">#&gt; Rows: 14,820</span></span>
 <span><span class="co">#&gt; Columns: 23</span></span>
 <span><span class="co">#&gt; $ match_id           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 27606, 27606, 27607, 27607, 27608, 27608, 27518, 27…</span></span>
 <span><span class="co">#&gt; $ season             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "1979", "1979", "1979", "1979", "1979", "1979", "19…</span></span>
@@ -195,10 +200,10 @@ separate line.</p>
 <code><a href="../reference/nbl_box_team.html">nbl_box_team()</a></code> function. This will return team box score
 data since the 2015-2016 season. Note, not all fields will contain data
 for earlier seasons.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">team_box</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nbl_box_team.html">nbl_box_team</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">team_box</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 2,134</span></span>
+<span><span class="co">#&gt; Rows: 2,146</span></span>
 <span><span class="co">#&gt; Columns: 67</span></span>
 <span><span class="co">#&gt; $ match_id                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 139002, 139002, 139003, 139003, 139004, 1390…</span></span>
 <span><span class="co">#&gt; $ season                    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015-2016", "2015-2016", "2015-2016", "2015…</span></span>
@@ -275,10 +280,10 @@ for earlier seasons.</p>
 <code><a href="../reference/nbl_box_player.html">nbl_box_player()</a></code> function. This will return player box
 score data since the 2015-2016 season. Note, not all fields will contain
 data for earlier seasons.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">player_box</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nbl_box_player.html">nbl_box_player</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">player_box</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 24,679</span></span>
+<span><span class="co">#&gt; Rows: 24,823</span></span>
 <span><span class="co">#&gt; Columns: 47</span></span>
 <span><span class="co">#&gt; $ match_id                  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 139002, 139002, 139002, 139002, 139002, 1390…</span></span>
 <span><span class="co">#&gt; $ season                    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015-2016", "2015-2016", "2015-2016", "2015…</span></span>
@@ -334,10 +339,10 @@ data for earlier seasons.</p>
 <p>To get play-by-play data, use the <code><a href="../reference/nbl_pbp.html">nbl_pbp()</a></code> function.
 This will return play-by-play data since the 2015-2016 season. Note, not
 all fields will contain data for earlier seasons.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">pbp</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nbl_pbp.html">nbl_pbp</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">pbp</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 593,917</span></span>
+<span><span class="co">#&gt; Rows: 597,443</span></span>
 <span><span class="co">#&gt; Columns: 25</span></span>
 <span><span class="co">#&gt; $ match_id        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 139002, 139002, 139002, 139002, 139002, 139002, 139002…</span></span>
 <span><span class="co">#&gt; $ season          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015-2016", "2015-2016", "2015-2016", "2015-2016", "2…</span></span>
@@ -371,10 +376,10 @@ all fields will contain data for earlier seasons.</p>
 <p>To get shot location and type data, use the <code><a href="../reference/nbl_shots.html">nbl_shots()</a></code>
 function. This will return shooting data since the 2015-2016 season.
 Note, not all fields will contain data for earlier seasons.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">shots</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/nbl_shots.html">nbl_shots</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">shots</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 148,693</span></span>
+<span><span class="co">#&gt; Rows: 149,547</span></span>
 <span><span class="co">#&gt; Columns: 20</span></span>
 <span><span class="co">#&gt; $ match_id        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 139002, 139002, 139002, 139002, 139002, 139002, 139002…</span></span>
 <span><span class="co">#&gt; $ season          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "2015-2016", "2015-2016", "2015-2016", "2015-2016", "2…</span></span>
