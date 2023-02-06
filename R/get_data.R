@@ -12,12 +12,10 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' try({
 #' results_wide <- nbl_results(wide_or_long="wide")
 #' results_long <- nbl_results(wide_or_long="long")
 #' })
-#' }
 nbl_results <- function(wide_or_long) {
   
   if(!wide_or_long %in% c("wide", "long")) stop("Please select either, 'wide' or 'long'")
@@ -47,11 +45,9 @@ nbl_results <- function(wide_or_long) {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' try({
 #' shots <- nbl_shots()
 #' })
-#' }
 nbl_shots <- function() {
   
   dat_df <- .file_reader("https://github.com/JaseZiv/nblr_data/releases/download/shots/shots.rds")
@@ -74,11 +70,9 @@ nbl_shots <- function() {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' try({
 #' pbp <- nbl_pbp()
 #' })
-#' }
 nbl_pbp <- function() {
   dat_urls <- paste0()
   
@@ -104,11 +98,9 @@ nbl_pbp <- function() {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' try({
 #' team_box <- nbl_box_team()
 #' })
-#' }
 nbl_box_team <- function() {
   
   dat_df <- .file_reader("https://github.com/JaseZiv/nblr_data/releases/download/box_team/box_team.rds")
@@ -132,11 +124,9 @@ nbl_box_team <- function() {
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' try({
 #' player_box <- nbl_box_player()
 #' })
-#' }
 nbl_box_player <- function() {
   
   dat_df <- .file_reader("https://github.com/JaseZiv/nblr_data/releases/download/box_player/box_player.rds")

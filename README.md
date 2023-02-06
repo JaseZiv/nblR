@@ -5,6 +5,12 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version-last-release/nblR?style=for-the-badge)](https://CRAN.R-project.org/package=nblR)
+[![CRAN
+downloads](http://cranlogs.r-pkg.org/badges/grand-total/nblR)](https://CRAN.R-project.org/package=nblR)
+[![Downloads](https://cranlogs.r-pkg.org/badges/nblR)](https://cran.r-project.org/package=nblR)
+
 [![Version-Number](https://img.shields.io/github/r-package/v/JaseZiv/nblR?label=nblR%20(Dev))](https://github.com/JaseZiv/nblR/)
 [![R-CMD-check](https://github.com/JaseZiv/nblR/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JaseZiv/nblR/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
@@ -16,7 +22,15 @@ from the Australian National Basketball League (NBL).
 
 ## Installation
 
-You can install the released version of
+You can install the CRAN version of
+[**`nblR`**](https://CRAN.R-project.org/package=nblR) with the below.
+
+``` r
+install.packages("nblR")
+library(nblR)
+```
+
+Alternatively, you can install the dev (little less stable) version of
 [**`nblR`**](https://github.com/JaseZiv/nblR/) from
 [GitHub](https://github.com/JaseZiv/nblR) with:
 

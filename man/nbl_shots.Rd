@@ -14,9 +14,7 @@ Returns a data frame of all available shot data
 for NBL matches played since 2015-16
 }
 \examples{
-\dontrun{
 try({
 shots <- nbl_shots()
 })
-}
 }

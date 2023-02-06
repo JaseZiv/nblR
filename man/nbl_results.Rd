@@ -18,10 +18,8 @@ Returns a data frame of all results in either wide or long form
 of all NBL matches played since 1979
 }
 \examples{
-\dontrun{
 try({
 results_wide <- nbl_results(wide_or_long="wide")
 results_long <- nbl_results(wide_or_long="long")
 })
-}
 }

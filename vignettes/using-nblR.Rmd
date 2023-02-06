@@ -27,7 +27,14 @@ This vignette will outline how to use the functions in the `nblR` package to all
 ## Installation
 
 
-You can install the released version of [**```nblR```**](https://github.com/JaseZiv/nblR/) from [GitHub](https://github.com/JaseZiv/nblR) with:
+You can install the CRAN version of [**```nblR```** ](https://CRAN.R-project.org/package=nblR) with the below.
+
+```{r cran-installation, eval=FALSE}
+install.packages("nblR")
+```
+
+
+Alternatively, you can install the dev (little less stable) version of [**```nblR```**](https://github.com/JaseZiv/nblR/) from [GitHub](https://github.com/JaseZiv/nblR) with:
 
 ```{r gh-installation, eval=FALSE}
 # install.packages("remotes")
@@ -49,7 +56,7 @@ The following code will show you how to get various different statistics for the
 
 ### Match Results
 
-To get results of matches playes in the NBL since the 1979 season, use the `nbl_results()` function. This function takes in one argument - `wide_or_long` (options either 'wide' or 'long').
+To get results of matches players in the NBL since the 1979 season, use the `nbl_results()` function. This function takes in one argument - `wide_or_long` (options either 'wide' or 'long').
 
 Using `wide_or_long = "wide"`, the resulting data frame will have one row per match played, with the home and away team listed.
 

@@ -14,9 +14,7 @@ Returns a data frame of all available play-by-play
 data for NBL matches played since 2015-16
 }
 \examples{
-\dontrun{
 try({
 pbp <- nbl_pbp()
 })
-}
 }

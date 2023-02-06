@@ -1,6 +1,5 @@
-# nblR (development version)
+# nblR 0.0.4
 
-* Loaders now load all data rather than just seasons (`0.0.0.2000`)
 
 First release:
 * `nbl_results()` to get match results since 1979

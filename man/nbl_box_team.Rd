@@ -14,9 +14,7 @@ Returns a data frame of all available team box scores
 data for NBL matches played since 2015-16
 }
 \examples{
-\dontrun{
 try({
 team_box <- nbl_box_team()
 })
-}
 }

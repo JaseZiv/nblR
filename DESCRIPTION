@@ -1,24 +1,24 @@
 Type: Package
 Package: nblR
-Title: Data extraction of Australian NBL basketball statistics
-Version: 0.0.0.2000
+Title: Data Extraction of Australian NBL Basketball Statistics
+Version: 0.0.4
 Authors@R: c(
     person("Jason", "Zivkovic", , "jaseziv83@gmail.com", role = c("aut", "cre", "cph"))
   )
 Description: Allow users to obtain basketball statistics for 
-    the Australian basketball leage (NBL). Stats include 
-    play-by-play, shooting locations, results and box scores
-    for teams and players.
+    the Australian basketball league 'NBL'<https://nbl.com.au/>. 
+    Stats include play-by-play, shooting locations, results and 
+    box scores for teams and players.
 License: GPL-3
 URL: https://github.com/JaseZiv/nblR
 BugReports: https://github.com/JaseZiv/nblR/issues
 Depends:
   R (>= 4.0.0)
 Imports:
-    dplyr,
     magrittr,
     cli
 Suggests: 
+    dplyr,
     knitr,
     rmarkdown,
     testthat (>= 3.0.0)
